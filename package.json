@@ -1,19 +1,27 @@
 {
-  "name": "pulumi",
+  "name": "with-docker",
+  "version": "0.0.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
   },
+  "dependencies": {},
   "devDependencies": {
     "prettier": "^3.2.5",
-    "turbo": "^2.0.7",
-    "typescript": "^5.4.5"
+    "turbo": "^2.0.7"
   },
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": ">=18"
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
   }
 }
