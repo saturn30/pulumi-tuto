@@ -34,3 +34,6 @@ yarn-error.log*
 
 # turbo
 .turbo
+
+# pulumi 키값
+deploy/vultr/Pulumi.vultr-tutorial.yaml
